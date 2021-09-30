@@ -115,5 +115,4 @@ Please make sure to update tests as appropriate.
 
 [MIT](https://choosealicense.com/licenses/mit/)
 
-
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.

@@ -1,15 +1,17 @@
 # Vagrant Box Config for Python Development Environment
 
+![pyenv](https://files.realpython.com/media/Getting-Started-With-pyenv_Watermarked.7b1dd55b32a1.jpg "Managinge Multiple Python Versions with pyenv")
+
 ## Description
 
-Build a Python development environment in a Debian virtual environment with Vagrant and VirtualBox.
+Configure a Python development environment in a Debian virtual environment using Vagrant and VirtualBox.
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+Clone the repository to your local system.
 
 ```bash
-git clone 
+git clone https://github.com/erick-marin/vagrant-pyenv.git
 ```
 
 ## Usage
@@ -112,3 +114,6 @@ Please make sure to update tests as appropriate.
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
+
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.

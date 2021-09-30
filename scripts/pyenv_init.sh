@@ -5,16 +5,18 @@
 cd /home/vagrant
 curl https://pyenv.run | bash
 
-pyenv install 3.8.10
-pyenv global 3.8.10
+# Add pyenv to your path and to initialize pyenv/pyenv-virtualenv auto completion.
+echo 'export PATH="$HOME/.pyenv/bin:$PATH"' >>/home/vagrant/.bashrc
+echo 'eval "$(pyenv init -)"' >>/home/vagrant/.bashrc
+echo 'eval "$(pyenv virtualenv-init -)"' >>/home/vagrant/.bashrc
 
 # Once you’ve done this, you need to reload your shell:
 
-# exec "$SHELL" # Or just restart your terminal
-source ~.bashrc
+# exec "$SHELL" # Restart your terminal
+source ~/.bashrc # Refresh bash terminal profile
 
 # Detect the use of requirements.txt
-pip install --upgrade pip
-if [ -f /vagrant/scripts/requirements.txt ]; then
-    pip install -r /vagrant/scripts/requirements.txt
+pip3 install --upgrade pip
+if [ -f /scripts/requirements.txt ]; then
+    pip3 install -r /scripts/requirements.txt
 fi

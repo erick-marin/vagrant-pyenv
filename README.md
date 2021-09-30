@@ -1,4 +1,4 @@
-# Vagrant Config for Python Development Environment
+# Vagrant Box Config for Python Development Environment
 
 ## Description
 

@@ -1,12 +1,7 @@
 #!/usr/bin/env bash
 
-apt update
-apt upgrade
-
-# Add pyenv to your path and to initialize pyenv/pyenv-virtualenv auto completion.
-echo 'export PATH="$HOME/.pyenv/bin:$PATH"' >>/home/vagrant/.bashrc
-echo 'eval "$(pyenv init -)"' >>/home/vagrant/.bashrc
-echo 'eval "$(pyenv virtualenv-init -)"' >>/home/vagrant/.bashrc
+apt-get -y update
+apt-get -y upgrade
 
 # pyenv builds Python from source, which means you’ll need build dependencies
 # to actually use pyenv.

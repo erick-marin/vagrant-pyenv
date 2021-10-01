@@ -79,7 +79,7 @@ This will open a new *MS Code* application window attempting to connect through 
 
 Since the *MS Code* extensions that are installed in your host machine may not have been introduced on the remote side, customize and install the necessary extensions.
 
-![Demo](media/demo.mp4 "Configuration demonstration.")
+![Demo](https://res.cloudinary.com/em-media/video/upload/v1633075287/vagrant-pyenv/demo_ge4lri.mp4 "Configuration demonstration.")
 
 If you want to see all the Pythone versions `pyenv` can install, you can do the following:
 

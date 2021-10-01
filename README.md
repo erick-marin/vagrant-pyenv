@@ -1,4 +1,4 @@
-# Vagrant Box Config for Python Development Environment
+# Vagrant "debian/buster64" Box Provisioned for Python Development Environment
 
 ![feature-image](images/feature-image-750x422.png "Vagrant VM Using pyenv to Manage Multiple Python Version Developments")
 

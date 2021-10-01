@@ -112,7 +112,7 @@ venv.bak/
 .mypy_cache/
 
 # Gimp files
-images/*.xcf
+media/*.xcf
 
-# exclude projects created with Vagrant VM
+# exclude projects created within Vagrant VM
 projects/*

@@ -81,6 +81,10 @@ Since the *MS Code* extensions that are installed in your host machine may not h
 
 ![Demo](https://res.cloudinary.com/em-media/video/upload/v1633075287/vagrant-pyenv/demo_ge4lri.mp4 "Configuration demonstration.")
 
+
+![Demo](https://user-images.githubusercontent.com/54794008/135587510-7b4d2835-e396-416e-be87-b9a54995e8bf.mp4)
+
+
 If you want to see all the Pythone versions `pyenv` can install, you can do the following:
 
 ```shell

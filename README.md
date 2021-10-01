@@ -1,35 +1,39 @@
 # Vagrant Box Config for Python Development Environment
 
-![pyenv](https://files.realpython.com/media/Getting-Started-With-pyenv_Watermarked.7b1dd55b32a1.jpg "Managinge Multiple Python Versions with pyenv")
+![feature-image](images/feature-image-750x422.png "Vagrant VM Using pyenv to Manage Multiple Python Version Developments")
 
 ## Description
 
-Configure a Python development environment in a Debian virtual environment using Vagrant and VirtualBox.
+Use *Vagrant* to configure a Debian OS virtual environment with *Oracle VirtualBox* as the provider.
 
-## Installation
+Use [`pyenv`](https://github.com/pyenv/pyenv "pyenv") installed on the VM to manage mutilpe Python versions and create virtual environments with per-project versions of Python.
+
+### Installation
 
 Clone the repository to your local system.
 
 ```bash
-git clone https://github.com/erick-marin/vagrant-pyenv.git
+git clone https://github.com/erick-marin/vagrant-pyenv.git my-vagrant-pyenv
 ```
 
-## Usage
+### Usage
 
-```python
-import foobar
+Run the *vagarantfile*:
 
-# returns 'words'
-foobar.pluralize('word')
-
-# returns 'geese'
-foobar.pluralize('goose')
-
-# returns 'phenomenon'
-foobar.singularize('phenomena')
+```shell
+vagrant up
 ```
 
-## Remote Development with Visual Studio Code
+If *Vagrant* detects more than one network interface installed on host machine, the command line will request, *"Which interface should the network bridge to?"*, as an input. Select the interface to use with guest VM:
+
+![Which interface?](images/01-which-interface.png "Which interface should the network bridge to?")
+
+The *vagrantfile* will implement box configuration along with accompanying scripts. This might take a few minutes. Once complete, you can connec to the device with `ssh`:
+
+```shell
+vagrant ssh
+```
+### Remote Development with Visual Studio Code
 
 With VSC open, after generating the Vagrant virtual machine (Debian), you have the option to access the VM from the terminal window:
 

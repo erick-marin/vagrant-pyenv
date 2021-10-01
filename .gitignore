@@ -113,3 +113,6 @@ venv.bak/
 
 # Gimp files
 images/*.xcf
+
+# exclude projects created with Vagrant VM
+projects/*

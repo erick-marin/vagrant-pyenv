@@ -65,21 +65,21 @@ vagrant ssh-config >> ~/.ssh/config
 
 To "*Open a Remote Window*", *click* on the icon displayed on the lower-left of the *MS Code* application window:
 
-![Open Remote Window](/media/02-open-remote-window.png "Open a Remote Window")
+![Open Remote Window](media/02-open-remote-window.png "Open a Remote Window")
 
 The command palette at the top of the applciation window will drop-down a list of options. *Click* on "*Connect to Host...*":
 
-![Connect to Host](/media/03-connect-to-host.png "Connect to Host")
+![Connect to Host](media/03-connect-to-host.png "Connect to Host")
 
 The command palette then indicates to "Select configured SSH Host" where you will select the VM remote machine you set in SSH `config` file:
 
-![Select configured SSH host](/media/04-select-configured-ssh-host.png "Select configured SSH host")
+![Select configured SSH host](media/04-select-configured-ssh-host.png "Select configured SSH host")
 
 This will open a new *MS Code* application window attempting to connect through remote SSH extension.  When a successful connection is made
 
 Since the *MS Code* extensions that are installed in your host machine may not have been introduced on the remote side, customize and install the necessary extensions.
 
-![Demo](/media/demo.mp4 "Configuration demonstration.")
+![Demo](media/demo.mp4 "Configuration demonstration.")
 
 If you want to see all the Pythone versions `pyenv` can install, you can do the following:
 

@@ -34,11 +34,12 @@ vagrant ssh
 
 ## Remote Development with Visual Studio Code
 
-If you are using [*Microsoft Visual Studio Code*](https://code.visualstudio.com/ "Microsoft Visual Studio Code") as your editor, take advantage of the IDE's features with the virtual Python environments you create. Install the [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-VSCode-remote.vscode-remote-extensionpack) extension from Microsoft.  Once the extension is installed, open your cloned project folder.
+If you are using [*Microsoft Visual Studio Code*](https://code.visualstudio.com/ "Microsoft Visual Studio Code") as your editor, take advantage of the IDE's features with the virtual Python environments you create. Install the [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-VSCode-remote.vscode-remote-extensionpack) extension from Microsoft.  Once the extension is installed, open your cloned Vagrant project folder.
 
-Before executing the following command, you should be disconnected from any `vagrant ssh` connections to VM. Run the following command to view the *SSH* `config` file for the *Vagrant* VM created:
+Before executing the following command, make sure the VM is running and disconnected from any `vagrant ssh` connection sessions. Run the following command to view the *SSH* `config` file for the *Vagrant* VM:
 
 ```shell
+vagrant up
 vagrant ssh-config
 ```
 
@@ -75,13 +76,23 @@ The command palette then indicates to "Select configured SSH Host" where you wil
 
 ![Select configured SSH host](media/04-select-configured-ssh-host.png "Select configured SSH host")
 
-This will open a new *MS Code* application window attempting to connect through remote SSH extension.  When a successful connection is made
+This will open a new *MS Code* application window attempting to connect through remote SSH extension.  When a successful connection is made, at the lower left of the application window, it will indicate connection status.  You will also be logged in to the *vagrant* user profile folder. Within the profile folder is a "*projects*" folder created when the Vagrant VM was generated.
 
-Since the *MS Code* extensions that are installed in your host machine may not have been introduced on the remote side, customize and install the necessary extensions
+![SSH Remote Connect](media/05-ssh-remote-connect.png)
 
-![Demo](https://user-images.githubusercontent.com/54794008/135587510-7b4d2835-e396-416e-be87-b9a54995e8bf.mp4)
+This remote folder is synced to the local host "*project*" folder in the cloned Vagrant repo. From within the remote "*projects*" folder, create individual Python project folders using `pyenv` to manage virtual environments and Python versions for each environment.
 
-If you want to see all the Pythone versions `pyenv` can install, you can do the following:
+![Synced Folders](media/06-synced-folder.png)
+
+From the remote *MS Code* application window, create a new directory using the built-in terminal.  Then open the folder with *MS Code".  Initialize as Git repository and begin building your project.
+
+![Open Project Folder](media/07-open-project-folder.png)
+
+Since the *MS Code* extensions that are installed in your host machine may not have been introduced on the remote side, customize and install the necessary extensions needed for your remote *VS Code* sessions.
+
+## Using `pyenv` to manage a Python project's virtual environment
+
+If you want to see all the Python versions `pyenv` can install, you can do the following:
 
 ```shell
 $ pyenv install --list
@@ -96,11 +107,11 @@ cd /home/vagrant
 pyenv install -v 3.8.10
 pyenv install -v 3.8.11
 pyenv install -v 3.8.12
+```
 
-# The global command sets the global Python version. This can be overridden
-# with other commands, but is useful for ensuring you use a particular Python
-# version by default. If you wanted to use 3.8.12 by default, then you could run # this:
+The `global` command sets the global Python version. This can be overridden with other commands, but is useful for ensuring you use a particular Python version by default. If you wanted to use version 3.8.12 by default, then you could run this:
 
+```shell
 pyenv global 3.8.12
 ```
 
@@ -113,5 +124,3 @@ Please make sure to update tests as appropriate.
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
-
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.

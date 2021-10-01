@@ -1,6 +1,6 @@
 # Vagrant "debian/buster64" Box Provisioned for Python Development Environment
 
-![feature-image](images/feature-image-750x422.png "Vagrant VM Using pyenv to Manage Multiple Python Version Developments")
+![feature-image](media/feature-image-750x422.png "Vagrant VM Using pyenv to Manage Multiple Python Version Developments")
 
 ## Description
 
@@ -24,7 +24,7 @@ vagrant up
 
 If *Vagrant* detects more than one network interface installed on host machine, the command line will request, *"Which interface should the network bridge to?"*, as an input. Select the interface to use with guest VM:
 
-![Which interface?](images/01-which-interface.png "Which interface should the network bridge to?")
+![Which interface?](media/01-which-interface.png "Which interface should the network bridge to?")
 
 The *vagrantfile* will implement box configuration along with accompanying provisioning scripts. This might take a few minutes. Once complete, you can connect to the VM with `ssh`:
 
@@ -65,17 +65,17 @@ vagrant ssh-config >> ~/.ssh/config
 
 To "*Open a Remote Window*", *click* on the icon displayed on the lower-left of the *MS Code* application window:
 
-![Open Remote Window](/images/02-open-remote-window.png "Open a Remote Window")
+![Open Remote Window](/media/02-open-remote-window.png "Open a Remote Window")
 
 The command palette at the top of the applciation window will drop-down a list of options. *Click* on "*Connect to Host...*":
 
-![Connect to Host](/images/03-connect-to-host.png "Connect to Host")
+![Connect to Host](/media/03-connect-to-host.png "Connect to Host")
 
 The command palette then indicates to "Select configured SSH Host" where you will select the VM remote machine you set in SSH `config` file:
 
-![Select configured SSH host](/images/04-select-configured-ssh-host.png "Select configured SSH host")
+![Select configured SSH host](/media/04-select-configured-ssh-host.png "Select configured SSH host")
 
-This will open a new *MS Code* application window attempting to connect through remote SSH extension.  When a successful connection is made 
+This will open a new *MS Code* application window attempting to connect through remote SSH extension.  When a successful connection is made
 
 Since the *MS Code* extensions that are installed in your host machine may not have been introduced on the remote side, customize and install the necessary extensions.
 

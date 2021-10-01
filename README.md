@@ -4,21 +4,19 @@
 
 ## Description
 
-Use *Vagrant* to configure a Debian OS virtual environment with *Oracle VirtualBox* as the provider.
+Use [*Vagrant*](https://www.vagrantup.com/ "Vagrant") to configure a Debian OS virtual environment with *Oracle VirtualBox* as the provider. Shell script provisioning installs [`pyenv`](https://github.com/pyenv/pyenv "pyenv") on the VM to manage mutilpe Python versions and create virtual environments with per-project versions of Python.
 
-Use [`pyenv`](https://github.com/pyenv/pyenv "pyenv") installed on the VM to manage mutilpe Python versions and create virtual environments with per-project versions of Python.
+## Installation
 
-### Installation
-
-Clone the repository to your local system.
+From a terminal window, clone the repository to your local system:
 
 ```bash
 git clone https://github.com/erick-marin/vagrant-pyenv.git my-vagrant-pyenv
 ```
 
-### Usage
+## Usage
 
-Run the *vagarantfile*:
+Run the *vagrantfile*:
 
 ```shell
 vagrant up
@@ -28,22 +26,17 @@ If *Vagrant* detects more than one network interface installed on host machine, 
 
 ![Which interface?](images/01-which-interface.png "Which interface should the network bridge to?")
 
-The *vagrantfile* will implement box configuration along with accompanying scripts. This might take a few minutes. Once complete, you can connec to the device with `ssh`:
-
-```shell
-vagrant ssh
-```
-### Remote Development with Visual Studio Code
-
-With VSC open, after generating the Vagrant virtual machine (Debian), you have the option to access the VM from the terminal window:
+The *vagrantfile* will implement box configuration along with accompanying provisioning scripts. This might take a few minutes. Once complete, you can connect to the VM with `ssh`:
 
 ```shell
 vagrant ssh
 ```
 
-But to take advantage of using VSC features with the virtual Python environment that you are using to develop your code, install the [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack) extension from Microsoft.
+## Remote Development with Visual Studio Code
 
-Once you have installed the extension, from your cloned project directory, execute the following command to view the SSH `config` file for the Vagrant "box" created:
+If you are using [*Microsoft Visual Studio Code*](https://code.visualstudio.com/ "Microsoft Visual Studio Code") as your editor, take advantage of the IDE's features with the virtual Python environments you create. Install the [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-VSCode-remote.vscode-remote-extensionpack) extension from Microsoft.  Once the extension is installed, open your cloned project folder.
+
+Before executing the following command, you should be disconnected from any `vagrant ssh` connections to VM. Run the following command to view the *SSH* `config` file for the *Vagrant* VM created:
 
 ```shell
 vagrant ssh-config
@@ -70,21 +63,21 @@ Execute the following command to copy the Vagrant box's SSH `config` to your loc
 vagrant ssh-config >> ~/.ssh/config
 ```
 
-To "Open a Remote Window", *click* on the icon displayed on the lower-left of the application window:
+To "*Open a Remote Window*", *click* on the icon displayed on the lower-left of the *MS Code* application window:
 
-![Open Remote Window](/images/01-remote-window.png "Open a Remote Window")
+![Open Remote Window](/images/02-open-remote-window.png "Open a Remote Window")
 
-The command palette at the top of the applciation window will drop-down a list of options. Select "Connect to Host...":
+The command palette at the top of the applciation window will drop-down a list of options. *Click* on "*Connect to Host...*":
 
-![Connect to Host](/images/02-connect-to-host.png "Connect to Host")
+![Connect to Host](/images/03-connect-to-host.png "Connect to Host")
 
-The command palette then indicates to "Select configured SSH Host" where you will select the VM remote machine you set:
+The command palette then indicates to "Select configured SSH Host" where you will select the VM remote machine you set in SSH `config` file:
 
-![Select configured SSH host](/images/03-select-configured-ssh-host.png "Select configured SSH host")
+![Select configured SSH host](/images/04-select-configured-ssh-host.png "Select configured SSH host")
 
-This will open a new VSC application window
+This will open a new *MS Code* application window attempting to connect through remote SSH extension.  When a successful connection is made 
 
-Since the extensions that are in the local may not have been introduced on the remote side, let's customize and install the necessary extensions.
+Since the *MS Code* extensions that are installed in your host machine may not have been introduced on the remote side, customize and install the necessary extensions.
 
 If you want to see all the Pythone versions `pyenv` can install, you can do the following:
 

@@ -15,11 +15,6 @@ echo 'eval "$(pyenv virtualenv-init -)"' >>/home/vagrant/.bashrc
 # exec "$SHELL" # Restart your terminal
 source ~/.bashrc # Refresh bash terminal profile
 
-pyenv install -v 3.8.10
-pyenv install -v 3.8.11
-pyenv install -v 3.8.12
-pyenv global 3.8.12
-
 # Detect the use of requirements.txt
 pip3 install --upgrade pip
 if [ -f /scripts/requirements.txt ]; then

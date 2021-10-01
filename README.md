@@ -19,10 +19,11 @@ git clone https://github.com/erick-marin/vagrant-pyenv.git my-vagrant-pyenv
 Run the *vagrantfile*:
 
 ```shell
+cd my-vagrant-pyenv
 vagrant up
 ```
 
-If *Vagrant* detects more than one network interface installed on host machine, the command line will request, *"Which interface should the network bridge to?"*, as an input. Select the interface to use with guest VM:
+If *Vagrant* detects more than one network interface installed on host machine, the command line will request, *"Which interface should the network bridge to?"* as an input. Select the interface to use with guest VM:
 
 ![Which interface?](media/01-which-interface.png "Which interface should the network bridge to?")
 
@@ -88,7 +89,9 @@ From the remote *MS Code* application window, create a new directory using the b
 
 ![Open Project Folder](media/07-open-project-folder.png)
 
-Since the *MS Code* extensions that are installed in your host machine may not have been introduced on the remote side, customize and install the necessary extensions needed for your remote *VS Code* sessions.
+Since the *MS Code* extensions that are installed in your host machine may not have been introduced on the remote side, customize and install the necessary extensions needed for your remote *VS Code* session.
+
+If you decide to delete the Vagrant VM you generated,  all the contents within the synced folder will be saved locally.  Generate the Vagrant VM again and the local folder will sync to VM's folder.
 
 ## Using `pyenv` to manage a Python project's virtual environment
 

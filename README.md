@@ -4,7 +4,7 @@
 
 ## Description
 
-Use [*Vagrant*](https://www.vagrantup.com/ "Vagrant") to configure a Debian OS virtual environment with *Oracle VirtualBox* as the provider. Shell script provisioning installs [`pyenv`](https://github.com/pyenv/pyenv "pyenv") on the VM to manage mutilpe Python versions and create virtual environments with per-project versions of Python.
+Use [*Vagrant*](https://www.vagrantup.com/ "Vagrant") to configure a Debian OS virtual environment with *Oracle VirtualBox* as the provider. Shell script provisioning installs [`pyenv`](https://github.com/pyenv/pyenv "pyenv") on the VM to manage mutilpe Python versions and installs *Poetry* for creating and managing Python projects.
 
 ## Installation
 
@@ -125,6 +125,8 @@ Use the following references to learn more about using `pyenv` to switch between
 
 - [Simple Python Version Management: pyenv](https://github.com/pyenv/pyenv "pyenv")
 - [Managing Multiple Python Versions With pyenv](https://realpython.com/intro-to-pyenv/#specifying-your-python-version)
+
+Visit the [Poetry](https://python-poetry.org/) website to learn more about dependency management and packaging in Python. It allows you to declare the libraries your project depends on and it will manage (install/update) them for you.  
 
 ## Contributing
 

@@ -1,6 +1,6 @@
 # Vagrant "debian/buster64" Box Provisioned for Python Development Environment
 
-![feature-image](media/feature-image-750x422.png "Vagrant VM Using pyenv to Manage Multiple Python Version Developments")
+![feature-image](media/feature-image-750x422.png "Vagrant VM Using pyenv to Manage Multiple Python Versions")
 
 ## Description
 
@@ -95,6 +95,10 @@ If you decide to delete the Vagrant VM you generated,  all the contents within t
 
 ## Using `pyenv` to manage a Python project's virtual environment
 
+`pyenv` is a wonderful tool for managing multiple Python versions. Even if you already have Python installed on your system, it is worth having pyenv installed so that you can easily try out new language features or help contribute to a project that is on a different version of Python.
+
+### Using `pyenv` to  Install Python
+
 If you want to see all the Python versions `pyenv` can install, you can do the following:
 
 ```shell
@@ -107,16 +111,20 @@ Once you find the Python version(s) you want, you can install it with a single c
 
 ```shell
 cd /home/vagrant
-pyenv install -v 3.8.10
-pyenv install -v 3.8.11
+pyenv install -v 3.7.12
 pyenv install -v 3.8.12
 ```
 
 The `global` command sets the global Python version. This can be overridden with other commands, but is useful for ensuring you use a particular Python version by default. If you wanted to use version 3.8.12 by default, then you could run this:
 
 ```shell
-pyenv global 3.8.12
+pyenv global 3.7.12
 ```
+
+Use the following references to learn more about using `pyenv` to switch between multiple versions of Python on your virtual environments:
+
+- [Simple Python Version Management: pyenv](https://github.com/pyenv/pyenv "pyenv")
+- [Managing Multiple Python Versions With pyenv](https://realpython.com/intro-to-pyenv/#specifying-your-python-version)
 
 ## Contributing
 

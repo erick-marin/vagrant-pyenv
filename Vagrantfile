@@ -80,6 +80,7 @@ Vagrant.configure("2") do |config|
   # SHELL
   config.vm.provision :shell, :path => "./scripts/init.sh", privileged: true
   config.vm.provision :shell, :path => "./scripts/pyenv_init.sh", privileged: false
+  config.vm.provision :shell, :path => "./scripts/poetry_init.sh", privileged: false
   # config.vm.provision :shell, :path => "./scripts/root_setting.sh", privileged: true
   # config.vm.provision :shell, :path => "./scripts/user_setting.sh", privileged: false
 end

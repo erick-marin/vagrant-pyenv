@@ -121,12 +121,10 @@ The `global` command sets the global Python version. This can be overridden with
 pyenv global 3.7.12
 ```
 
-Use the following references to learn more about using `pyenv` to switch between multiple versions of Python on your virtual environments:
+For further information on using `pyenv` and `PDM` visit the following sites:
 
 - [Simple Python Version Management: pyenv](https://github.com/pyenv/pyenv "pyenv")
-- [Managing Multiple Python Versions With pyenv](https://realpython.com/intro-to-pyenv/#specifying-your-python-version)
-
-Visit the [Poetry](https://python-poetry.org/) website to learn more about dependency management and packaging in Python. It allows you to declare the libraries your project depends on and it will manage (install/update) them for you.  
+- [PDM - Python Development Master](https://pdm.fming.dev)
 
 ## Contributing
 

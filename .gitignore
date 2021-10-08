@@ -116,3 +116,7 @@ media/*.xcf
 
 # exclude projects created within Vagrant VM
 projects/*
+
+# PDM - Python Development Master
+.pdm.toml
+__pypackages__/

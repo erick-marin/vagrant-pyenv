@@ -42,7 +42,7 @@ Vagrant.configure("2") do |config|
   # Bridged networks make the machine appear as another physical device on
   # your network.
   # config.vm.network "public_network"
-  config.vm.hostname = "pydevenv.local"
+  config.vm.hostname = "pydev.local"
   config.vm.network "public_network"
 
   # Share an additional folder to the guest VM. The first argument is
@@ -65,7 +65,7 @@ Vagrant.configure("2") do |config|
   #   # Customize the amount of memory on the VM:
   #   vb.memory = "1024"
       vb.memory = "4996"
-      vb.cpus = 2
+      vb.cpus = 4
   end
   #
   # View the documentation for the provider you are using for more
@@ -78,9 +78,10 @@ Vagrant.configure("2") do |config|
   #   apt-get update
   #   apt-get install -y apache2
   # SHELL
-  config.vm.provision :shell, :path => "./scripts/init.sh", privileged: true
-  config.vm.provision :shell, :path => "./scripts/pyenv_init.sh", privileged: false
-  config.vm.provision :shell, :path => "./scripts/poetry_init.sh", privileged: false
   # config.vm.provision :shell, :path => "./scripts/root_setting.sh", privileged: true
   # config.vm.provision :shell, :path => "./scripts/user_setting.sh", privileged: false
+  config.vm.provision :shell, :path => "./scripts/init.sh", privileged: true
+  config.vm.provision :shell, :path => "./scripts/pyenv_init.sh", privileged: false
+  config.vm.provision :shell, :path => "./scripts/pdm_init.sh", privileged: false
+  
 end
